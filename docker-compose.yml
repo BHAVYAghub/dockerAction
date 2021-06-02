@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        - PAT=${PAT}
+        - PAT={{secrets.PAT}}
 
 
 
