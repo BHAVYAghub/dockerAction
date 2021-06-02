@@ -8,6 +8,6 @@ jobs:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v2
 
-      - name: Load Schema of YCQL
+      - name: compose
         run: |
-          docker-compose up
+          echo ${{secrets.PAT}}
