@@ -11,8 +11,6 @@ jobs:
         uses: actions/checkout@v2
       - name: compose
         run: |
-          docker-compose up
-#          docker build -t pat --build-arg PAT=$PAT .
-#          docker run pat
-
+          docker build -t pat --build-arg PAT=$PAT .
+          docker run pat
 
