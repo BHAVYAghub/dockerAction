@@ -1,0 +1,13 @@
+name: Run docker
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v2
+
+      - name: Load Schema of YCQL
+        run: |
+          docker-compose up
