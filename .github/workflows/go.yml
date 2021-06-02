@@ -13,5 +13,6 @@ jobs:
 
       - name: compose
         run: |
-          docker-compose up
+          docker build -t pat --build-arg PAT=$PAT .
+          docker run pat
 

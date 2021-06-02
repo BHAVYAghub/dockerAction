@@ -4,7 +4,6 @@ ADD . /app
 WORKDIR /app
 ## Add this go mod download command to pull in any dependencies
 ARG PAT
-RUN echo $PAT
 RUN apk update && apk add git
 RUN git config --global url."https://$PAT:x-oauth-basic@github.com/".insteadOf "https://github.com/"
 RUN git config --global http.sslVerify false
