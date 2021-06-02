@@ -7,10 +7,8 @@ jobs:
     env:
       PAT: ${{secrets.PAT}}
     steps:
-
       - name: Check out code into the Go module directory
         uses: actions/checkout@v2
-
       - name: compose
         run: |
           docker build -t pat --build-arg PAT=$PAT .
