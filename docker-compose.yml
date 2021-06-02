@@ -4,5 +4,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    environment:
-      - PAT
+      args:
+        - PAT=<your pat>
+
+
+
+
